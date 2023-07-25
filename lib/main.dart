@@ -32,15 +32,36 @@ class MainApp extends StatelessWidget {
               ),
               backgroundColor: const Color.fromRGBO(203, 231, 194, 1),
             ),
-            body: const TabBarView(
+            body: TabBarView(
               children: [
-                Center(
-                  child: Text('Sawi'),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    children: <Widget>[
+                      Card(
+                        child: Column(
+                          children: <Widget>[
+                            AspectRatio(
+                              aspectRatio: 2 / 1,
+                              child: Image.asset('images/potatoes.png'),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 8, bottom: 8),
+                              child: Text('Potato'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                Center(
-                  child: Text('Nangka'),
+                const Center(
+                  child: Text('Nangka a'),
                 ),
-                Center(
+                const Center(
                   child: Text('Kacang'),
                 )
               ],
