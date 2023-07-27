@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vegetarian/model/items_vegetarian.dart';
+import 'package:flutter_vegetarian/item_detail_screen.dart';
+import 'package:flutter_vegetarian/model/colors.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
-
-  final Color? colorTextAppbar = const Color.fromARGB(255, 0, 74, 62);
-  final Color? colorSelectedTab = const Color.fromARGB(255, 2, 132, 111);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +14,13 @@ class MainScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(203, 231, 194, 1),
             elevation: 0,
-            title: Text('Vegetarian mania',
-                style: TextStyle(color: colorTextAppbar)),
-            bottom: TabBar(
-              labelColor: colorSelectedTab,
-              unselectedLabelColor: colorTextAppbar,
-              indicatorColor: colorSelectedTab,
-              tabs: const [
+            title: const Text('Vegetarian mania',
+                style: TextStyle(color: colorPrimary)),
+            bottom: const TabBar(
+              labelColor: colorSecondary,
+              unselectedLabelColor: colorPrimary,
+              indicatorColor: colorSecondary,
+              tabs: [
                 Tab(text: 'Vegetables'),
                 Tab(text: 'Fruits'),
                 Tab(text: 'Legumes')
@@ -79,7 +78,10 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => ItemDetail(item: item)));
+      },
       child: Card(
         elevation: 20,
         shape:
