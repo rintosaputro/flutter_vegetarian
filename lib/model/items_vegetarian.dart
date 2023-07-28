@@ -5,6 +5,8 @@ class ItemsVegetarian {
   String imageAsset;
   String priceInMarket;
   String description;
+  String nutritionsTypeWeight;
+  List<String> listNutritions;
 
   ItemsVegetarian(
       {required this.type,
@@ -12,7 +14,9 @@ class ItemsVegetarian {
       required this.nutrition,
       required this.imageAsset,
       required this.priceInMarket,
-      required this.description});
+      required this.description,
+      required this.nutritionsTypeWeight,
+      required this.listNutritions});
 }
 
 var vegetables = [
@@ -23,7 +27,22 @@ var vegetables = [
       imageAsset: 'images/vegetables/brocolli.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Broccoli is a highly nutritious cruciferous vegetable with a wealth of health benefits. It is packed with essential vitamins and minerals, making it a valuable addition to any diet. Broccoli is a rich source of vitamin C, which boosts the immune system and supports skin health. It is also high in vitamin K, contributing to bone health and blood clotting. Furthermore, broccoli provides vitamin A, crucial for vision and immune function, and folate, important for cell division and DNA synthesis. The fiber content aids in digestion and helps maintain bowel regularity. Broccoli contains various antioxidants, like sulforaphane and quercetin, which protect against oxidative stress and reduce the risk of chronic diseases. Its low-calorie and low-fat nature make it an excellent choice for weight management. Enjoyed steamed, roasted, stir-fried, or added to soups and salads, broccoli is a delicious and nutritious addition to a well-rounded diet.'),
+          'Broccoli is a highly nutritious cruciferous vegetable with a wealth of health benefits. It is packed with essential vitamins and minerals, making it a valuable addition to any diet. Broccoli is a rich source of vitamin C, which boosts the immune system and supports skin health. It is also high in vitamin K, contributing to bone health and blood clotting. Furthermore, broccoli provides vitamin A, crucial for vision and immune function, and folate, important for cell division and DNA synthesis. The fiber content aids in digestion and helps maintain bowel regularity. Broccoli contains various antioxidants, like sulforaphane and quercetin, which protect against oxidative stress and reduce the risk of chronic diseases. Its low-calorie and low-fat nature make it an excellent choice for weight management. Enjoyed steamed, roasted, stir-fried, or added to soups and salads, broccoli is a delicious and nutritious addition to a well-rounded diet.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 34 kcal",
+        "Carbohydrates: 6.6 grams",
+        "Protein: 2.8 grams",
+        "Fat: 0.4 grams",
+        "Fiber: 2.6 grams",
+        "Vitamin C: 89.2 mg",
+        "Vitamin A: 623 IU",
+        "Vitamin K: 101.6 mcg",
+        "Folate: 63 mcg",
+        "Calcium: 47 mg",
+        "Iron: 0.7 mg",
+        "Potassium: 316 mg",
+      ]),
   ItemsVegetarian(
       type: 'vegetables',
       name: 'Cabbage',
@@ -31,7 +50,22 @@ var vegetables = [
       imageAsset: 'images/vegetables/cabbage.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Cabbage is a highly nutritious and versatile vegetable that offers an array of health benefits. It is low in calories but rich in essential nutrients. Cabbage is an excellent source of vitamin C, providing a boost to the immune system and promoting healthy skin. It is also high in vitamin K, which plays a key role in bone health and blood clotting. Additionally, cabbage contains vitamin B6, which is essential for metabolism and brain function. The fiber content aids in digestion and helps with bowel regularity. Cabbage belongs to the cruciferous vegetable family, known for its high levels of antioxidants, such as sulforaphane and kaempferol, which help protect the body from oxidative stress and may reduce the risk of chronic diseases. Enjoyed raw in salads, steamed, sautéed, or fermented to make dishes like sauerkraut, cabbage is a nutritious and delicious addition to a healthy diet.'),
+          'Cabbage is a highly nutritious and versatile vegetable that offers an array of health benefits. It is low in calories but rich in essential nutrients. Cabbage is an excellent source of vitamin C, providing a boost to the immune system and promoting healthy skin. It is also high in vitamin K, which plays a key role in bone health and blood clotting. Additionally, cabbage contains vitamin B6, which is essential for metabolism and brain function. The fiber content aids in digestion and helps with bowel regularity. Cabbage belongs to the cruciferous vegetable family, known for its high levels of antioxidants, such as sulforaphane and kaempferol, which help protect the body from oxidative stress and may reduce the risk of chronic diseases. Enjoyed raw in salads, steamed, sautéed, or fermented to make dishes like sauerkraut, cabbage is a nutritious and delicious addition to a healthy diet.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 25 kcal",
+        "Carbohydrates: 5.8 grams",
+        "Protein: 1.3 grams",
+        "Fat: 0.1 grams",
+        "Fiber: 2.5 grams",
+        "Vitamin C: 36.6 mg",
+        "Vitamin A: 98 IU",
+        "Vitamin K: 76 mcg",
+        "Folate: 43 mcg",
+        "Calcium: 40 mg",
+        "Iron: 0.3 mg",
+        "Potassium: 170 mg",
+      ]),
   ItemsVegetarian(
       type: 'vegetables',
       name: 'Carrot',
@@ -39,7 +73,22 @@ var vegetables = [
       imageAsset: 'images/vegetables/carrot.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Carrots are a nutrient-dense and vibrant orange vegetable with a host of health benefits. They are an excellent source of beta-carotene, a powerful antioxidant that the body converts into vitamin A, essential for vision, immune function, and healthy skin. Carrots also provide vitamin C, supporting the immune system and collagen production for healthy skin and connective tissues. The fiber in carrots aids in digestion and promotes bowel regularity. Additionally, they contain potassium, which contributes to heart health and helps regulate blood pressure. The antioxidants in carrots, such as lutein and zeaxanthin, are beneficial for eye health. With their crunchy texture and sweet flavor, carrots are a convenient and delicious snack when raw, and they add natural sweetness to various cooked dishes like stews, soups, and stir-fries. Incorporating carrots into your diet can be a simple and enjoyable way to boost your overall health and well-being.'),
+          'Carrots are a nutrient-dense and vibrant orange vegetable with a host of health benefits. They are an excellent source of beta-carotene, a powerful antioxidant that the body converts into vitamin A, essential for vision, immune function, and healthy skin. Carrots also provide vitamin C, supporting the immune system and collagen production for healthy skin and connective tissues. The fiber in carrots aids in digestion and promotes bowel regularity. Additionally, they contain potassium, which contributes to heart health and helps regulate blood pressure. The antioxidants in carrots, such as lutein and zeaxanthin, are beneficial for eye health. With their crunchy texture and sweet flavor, carrots are a convenient and delicious snack when raw, and they add natural sweetness to various cooked dishes like stews, soups, and stir-fries. Incorporating carrots into your diet can be a simple and enjoyable way to boost your overall health and well-being.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 41 kcal",
+        "Carbohydrates: 9.6 grams",
+        "Protein: 0.9 grams",
+        "Fat: 0.2 grams",
+        "Fiber: 2.8 grams",
+        "Vitamin C: 5.9 mg",
+        "Vitamin A: 8350 IU",
+        "Vitamin K: 13.2 mcg",
+        "Folate: 19 mcg",
+        "Calcium: 33 mg",
+        "Iron: 0.3 mg",
+        "Potassium: 320 mg",
+      ]),
   ItemsVegetarian(
       type: 'vegetables',
       name: 'Mustard',
@@ -47,7 +96,22 @@ var vegetables = [
       imageAsset: 'images/vegetables/mustard.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Mustard is a versatile condiment made from mustard seeds and has some potential health benefits. Mustard seeds are a good source of various nutrients, including protein, fiber, vitamin B6, and minerals such as calcium, magnesium, and potassium. The spice also contains compounds like glucosinolates, which have been associated with potential health-promoting properties. Some studies suggest that consuming mustard seeds or mustard products may help support digestion, reduce inflammation, and provide antioxidant benefits. However, it`s essential to note that the potential health benefits of mustard are mostly related to consuming it in moderation as a condiment rather than in large quantities. As with any food, individual dietary needs and preferences should be taken into consideration.'),
+          'Mustard is a versatile condiment made from mustard seeds and has some potential health benefits. Mustard seeds are a good source of various nutrients, including protein, fiber, vitamin B6, and minerals such as calcium, magnesium, and potassium. The spice also contains compounds like glucosinolates, which have been associated with potential health-promoting properties. Some studies suggest that consuming mustard seeds or mustard products may help support digestion, reduce inflammation, and provide antioxidant benefits. However, it`s essential to note that the potential health benefits of mustard are mostly related to consuming it in moderation as a condiment rather than in large quantities. As with any food, individual dietary needs and preferences should be taken into consideration.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 508 kcal",
+        "Carbohydrates: 28.09 grams",
+        "Protein: 26.08 grams",
+        "Fat: 36.24 grams",
+        "Fiber: 12.2 grams",
+        "Vitamin C: 60.1 mg",
+        "Vitamin A: 8 IU",
+        "Vitamin K: 5.4 mcg",
+        "Folate: 0 mcg",
+        "Calcium: 830 mg",
+        "Iron: 9.21 mg",
+        "Potassium: 738 mg",
+      ]),
   ItemsVegetarian(
       type: 'vegetables',
       name: 'Potato',
@@ -55,7 +119,22 @@ var vegetables = [
       imageAsset: 'images/vegetables/potatoes.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Potatoes are a nutritious and versatile vegetable, providing a good source of essential nutrients. They are rich in complex carbohydrates, mainly in the form of starch, offering a steady release of energy. Additionally, potatoes contain dietary fiber, supporting healthy digestion and bowel regularity. They are a good source of vitamin C, an antioxidant that boosts the immune system and promotes healthy skin. Potatoes also provide potassium, which aids in maintaining proper heart function and regulating blood pressure. As part of a balanced diet, potatoes can contribute to overall health and well-being, offering a satisfying and nourishing addition to various meals when prepared in a healthy manner. However, portion control and cooking methods are crucial to maximize their nutritional benefits and avoid adding excess unhealthy fats.'),
+          'Potatoes are a nutritious and versatile vegetable, providing a good source of essential nutrients. They are rich in complex carbohydrates, mainly in the form of starch, offering a steady release of energy. Additionally, potatoes contain dietary fiber, supporting healthy digestion and bowel regularity. They are a good source of vitamin C, an antioxidant that boosts the immune system and promotes healthy skin. Potatoes also provide potassium, which aids in maintaining proper heart function and regulating blood pressure. As part of a balanced diet, potatoes can contribute to overall health and well-being, offering a satisfying and nourishing addition to various meals when prepared in a healthy manner. However, portion control and cooking methods are crucial to maximize their nutritional benefits and avoid adding excess unhealthy fats.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 77 kcal",
+        "Carbohydrates: 17.49 grams",
+        "Protein: 2.02 grams",
+        "Fat: 0.1 grams",
+        "Fiber: 2.2 grams",
+        "Vitamin C: 19.7 mg",
+        "Vitamin A: 0 IU",
+        "Vitamin K: 2.2 mcg",
+        "Folate: 16 mcg",
+        "Calcium: 11 mg",
+        "Iron: 0.81 mg",
+        "Potassium: 429 mg",
+      ]),
 ];
 
 var fruits = [
@@ -66,7 +145,22 @@ var fruits = [
       imageAsset: 'images/fruits/apple.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Apples are a popular and delicious fruit known for their sweet and crisp flavor. They are not only satisfying to the taste buds but also offer a range of essential nutrients. A medium-sized apple (about 182 grams) provides approximately 95 calories and contains a variety of vitamins and minerals. Apples are a rich source of dietary fiber, promoting healthy digestion and providing a feeling of fullness, making them a great snack for weight management. They are also packed with vitamin C, which boosts the immune system and supports healthy skin. Additionally, apples provide small amounts of potassium, an essential mineral for heart health, and vitamin K, which plays a role in blood clotting and bone health. Consuming apples as part of a balanced diet can contribute to overall well-being and provide a delicious and nutritious way to satisfy sweet cravings.'),
+          'Apples are a popular and delicious fruit known for their sweet and crisp flavor. They are not only satisfying to the taste buds but also offer a range of essential nutrients. A medium-sized apple (about 182 grams) provides approximately 95 calories and contains a variety of vitamins and minerals. Apples are a rich source of dietary fiber, promoting healthy digestion and providing a feeling of fullness, making them a great snack for weight management. They are also packed with vitamin C, which boosts the immune system and supports healthy skin. Additionally, apples provide small amounts of potassium, an essential mineral for heart health, and vitamin K, which plays a role in blood clotting and bone health. Consuming apples as part of a balanced diet can contribute to overall well-being and provide a delicious and nutritious way to satisfy sweet cravings.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 52 kcal",
+        "Carbohydrates: 13.81 grams",
+        "Protein: 0.26 grams",
+        "Fat: 0.17 grams",
+        "Fiber: 2.4 grams",
+        "Vitamin C: 4.6 mg",
+        "Vitamin A: 3 IU",
+        "Vitamin K: 2.2 mcg",
+        "Folate: 3 mcg",
+        "Calcium: 6 mg",
+        "Iron: 0.12 mg",
+        "Potassium: 107 mg",
+      ]),
   ItemsVegetarian(
       type: 'fruits',
       name: 'Grapes',
@@ -74,7 +168,22 @@ var fruits = [
       imageAsset: 'images/fruits/grapes.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Grapes are succulent and sweet berries that come in a variety of colors, including green, red, and purple. They are not only a delightful snack but also offer a range of nutritional benefits. Grapes are relatively low in calories, with about 70-80 calories per 100-gram serving. They are an excellent source of natural sugars, making them a healthier alternative to refined sweets. Grapes are rich in antioxidants, such as resveratrol, which may have potential health benefits, including promoting heart health and reducing inflammation. They also provide essential vitamins and minerals, including vitamin C, vitamin K, and potassium. Additionally, grapes contain dietary fiber, which aids in digestion and helps maintain bowel regularity. Including grapes in your diet can add a burst of flavor and nutrition, making them a tasty and healthy choice for snacking or adding to salads, desserts, and smoothies.'),
+          'Grapes are succulent and sweet berries that come in a variety of colors, including green, red, and purple. They are not only a delightful snack but also offer a range of nutritional benefits. Grapes are relatively low in calories, with about 70-80 calories per 100-gram serving. They are an excellent source of natural sugars, making them a healthier alternative to refined sweets. Grapes are rich in antioxidants, such as resveratrol, which may have potential health benefits, including promoting heart health and reducing inflammation. They also provide essential vitamins and minerals, including vitamin C, vitamin K, and potassium. Additionally, grapes contain dietary fiber, which aids in digestion and helps maintain bowel regularity. Including grapes in your diet can add a burst of flavor and nutrition, making them a tasty and healthy choice for snacking or adding to salads, desserts, and smoothies.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 69 kcal",
+        "Carbohydrates: 18.1 grams",
+        "Protein: 0.72 grams",
+        "Fat: 0.16 grams",
+        "Fiber: 0.9 grams",
+        "Vitamin C: 3.2 mg",
+        "Vitamin A: 66 IU",
+        "Vitamin K: 14.6 mcg",
+        "Folate: 2 mcg",
+        "Calcium: 10 mg",
+        "Iron: 0.36 mg",
+        "Potassium: 191 mg",
+      ]),
   ItemsVegetarian(
       type: 'fruits',
       name: 'Mango',
@@ -82,7 +191,22 @@ var fruits = [
       imageAsset: 'images/fruits/mango.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Mangoes are tropical fruits loved for their juicy, sweet, and refreshing taste. They are not only a delectable treat but also offer a wide range of nutritional benefits. A medium-sized mango (about 150 grams) contains approximately 100 calories and is packed with essential vitamins and minerals. Mangoes are a rich source of vitamin C, which supports the immune system, promotes healthy skin, and aids in collagen production. They also provide vitamin A, contributing to vision health and immune function. Mangoes are a good source of dietary fiber, aiding in digestion and promoting a feeling of fullness. Additionally, mangoes contain potassium, an essential mineral for heart health and regulating blood pressure. With their vibrant color and luscious taste, mangoes are a delightful addition to various dishes, such as smoothies, salads, salsas, and desserts, providing both deliciousness and nutritional value to your diet.'),
+          'Mangoes are tropical fruits loved for their juicy, sweet, and refreshing taste. They are not only a delectable treat but also offer a wide range of nutritional benefits. A medium-sized mango (about 150 grams) contains approximately 100 calories and is packed with essential vitamins and minerals. Mangoes are a rich source of vitamin C, which supports the immune system, promotes healthy skin, and aids in collagen production. They also provide vitamin A, contributing to vision health and immune function. Mangoes are a good source of dietary fiber, aiding in digestion and promoting a feeling of fullness. Additionally, mangoes contain potassium, an essential mineral for heart health and regulating blood pressure. With their vibrant color and luscious taste, mangoes are a delightful addition to various dishes, such as smoothies, salads, salsas, and desserts, providing both deliciousness and nutritional value to your diet.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 60 kcal",
+        "Carbohydrates: 14.98 grams",
+        "Protein: 0.82 grams",
+        "Fat: 0.38 grams",
+        "Fiber: 1.6 grams",
+        "Vitamin C: 36.4 mg",
+        "Vitamin A: 1082 IU",
+        "Vitamin K: 4.2 mcg",
+        "Folate: 14 mcg",
+        "Calcium: 11 mg",
+        "Iron: 0.16 mg",
+        "Potassium: 168 mg",
+      ]),
   ItemsVegetarian(
       type: 'fruits',
       name: 'Orange',
@@ -90,7 +214,22 @@ var fruits = [
       imageAsset: 'images/fruits/orange.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Oranges are bright and citrusy fruits that are not only flavorful but also rich in essential nutrients. A medium-sized orange (about 130 grams) contains approximately 62 calories and offers a variety of health benefits. Oranges are an excellent source of vitamin C, providing more than the recommended daily intake, which boosts the immune system, supports collagen production for healthy skin, and aids in iron absorption. They also contain vitamin A, contributing to vision and immune health. Oranges are a good source of dietary fiber, promoting digestive health and helping with bowel regularity. Additionally, oranges provide potassium, an important mineral for heart health and maintaining proper blood pressure levels. Enjoyed as a fresh snack or used in juices, smoothies, salads, and desserts, oranges are a delicious and nutritious addition to a balanced diet, offering a burst of tangy goodness and a range of essential nutrients.'),
+          'Oranges are bright and citrusy fruits that are not only flavorful but also rich in essential nutrients. A medium-sized orange (about 130 grams) contains approximately 62 calories and offers a variety of health benefits. Oranges are an excellent source of vitamin C, providing more than the recommended daily intake, which boosts the immune system, supports collagen production for healthy skin, and aids in iron absorption. They also contain vitamin A, contributing to vision and immune health. Oranges are a good source of dietary fiber, promoting digestive health and helping with bowel regularity. Additionally, oranges provide potassium, an important mineral for heart health and maintaining proper blood pressure levels. Enjoyed as a fresh snack or used in juices, smoothies, salads, and desserts, oranges are a delicious and nutritious addition to a balanced diet, offering a burst of tangy goodness and a range of essential nutrients.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 43 kcal",
+        "Carbohydrates: 8.2 grams",
+        "Protein: 0.8 grams",
+        "Fat: 0.2 grams",
+        "Fiber: 2.4 grams",
+        "Vitamin C: 53.2 mg",
+        "Vitamin A: 225 IU",
+        "Vitamin K: 0.2 mcg",
+        "Folate: 30 mcg",
+        "Calcium: 43 mg",
+        "Iron: 0.1 mg",
+        "Potassium: 181 mg",
+      ]),
   ItemsVegetarian(
       type: 'fruits',
       name: 'Peach',
@@ -98,7 +237,22 @@ var fruits = [
       imageAsset: 'images/fruits/peach.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Peaches are juicy and flavorful fruits that offer a delicious taste and a range of nutritional benefits. A medium-sized peach (about 150 grams) contains approximately 60 calories and is packed with essential vitamins and minerals. Peaches are an excellent source of vitamin C, which boosts the immune system, promotes healthy skin, and aids in collagen production. They also provide vitamin A, contributing to vision health and immune function. Peaches are a good source of dietary fiber, aiding in digestion and supporting bowel regularity. Additionally, peaches contain potassium, an essential mineral for heart health and regulating blood pressure. They also provide small amounts of vitamins E and K, which have their own health benefits. Peaches can be enjoyed fresh as a juicy snack or used in various culinary creations, such as salads, smoothies, desserts, and even savory dishes, making them a delightful and nutritious addition to any meal.'),
+          'Peaches are juicy and flavorful fruits that offer a delicious taste and a range of nutritional benefits. A medium-sized peach (about 150 grams) contains approximately 60 calories and is packed with essential vitamins and minerals. Peaches are an excellent source of vitamin C, which boosts the immune system, promotes healthy skin, and aids in collagen production. They also provide vitamin A, contributing to vision health and immune function. Peaches are a good source of dietary fiber, aiding in digestion and supporting bowel regularity. Additionally, peaches contain potassium, an essential mineral for heart health and regulating blood pressure. They also provide small amounts of vitamins E and K, which have their own health benefits. Peaches can be enjoyed fresh as a juicy snack or used in various culinary creations, such as salads, smoothies, desserts, and even savory dishes, making them a delightful and nutritious addition to any meal.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 39 kcal",
+        "Carbohydrates: 9.54 grams",
+        "Protein: 0.91 grams",
+        "Fat: 0.25 grams",
+        "Fiber: 1.5 grams",
+        "Vitamin C: 6.6 mg",
+        "Vitamin A: 326 IU",
+        "Vitamin K: 2.6 mcg",
+        "Folate: 4 mcg",
+        "Calcium: 6 mg",
+        "Iron: 0.25 mg",
+        "Potassium: 190 mg",
+      ]),
 ];
 
 var legumes = [
@@ -109,7 +263,22 @@ var legumes = [
       imageAsset: 'images/legumes/black-beans.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Black beans are a great source of protein, fiber, and antioxidants. They are commonly used in Mexican and Latin American dishes, such as burritos, tacos, and salads.'),
+          'Black beans are a great source of protein, fiber, and antioxidants. They are commonly used in Mexican and Latin American dishes, such as burritos, tacos, and salads.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 132 kcal",
+        "Carbohydrates: 23.71 grams",
+        "Protein: 8.86 grams",
+        "Fat: 0.54 grams",
+        "Fiber: 8.7 grams",
+        "Vitamin C: 0.5 mg",
+        "Vitamin A: 0 IU",
+        "Vitamin K: 4.8 mcg",
+        "Folate: 256 mcg",
+        "Calcium: 28 mg",
+        "Iron: 1.81 mg",
+        "Potassium: 339 mg",
+      ]),
   ItemsVegetarian(
       type: 'legumes',
       name: 'Black Eyed Peas',
@@ -117,7 +286,22 @@ var legumes = [
       imageAsset: 'images/legumes/black-eyed-peas.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Black-eyed peas are rich in protein, fiber, and various vitamins and minerals. They are commonly used in Southern cuisine and can be included in salads, stews, and side dishes.'),
+          'Black-eyed peas are rich in protein, fiber, and various vitamins and minerals. They are commonly used in Southern cuisine and can be included in salads, stews, and side dishes.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 82 kcal",
+        "Carbohydrates: 14.57 grams",
+        "Protein: 4.61 grams",
+        "Fat: 0.36 grams",
+        "Fiber: 4.3 grams",
+        "Vitamin C: 1.1 mg",
+        "Vitamin A: 25 IU",
+        "Vitamin K: 1.8 mcg",
+        "Folate: 128 mcg",
+        "Calcium: 17 mg",
+        "Iron: 1.13 mg",
+        "Potassium: 278 mg",
+      ]),
   ItemsVegetarian(
       type: 'legumes',
       name: 'Kidney Beans',
@@ -125,7 +309,22 @@ var legumes = [
       imageAsset: 'images/legumes/kidney-beans.png',
       priceInMarket: 'Rp10.000',
       description:
-          ': Kidney beans are a popular legume that is rich in protein, fiber, and iron. They are commonly used in chili, soups, and salads.'),
+          ': Kidney beans are a popular legume that is rich in protein, fiber, and iron. They are commonly used in chili, soups, and salads.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 127 kcal",
+        "Carbohydrates: 22.8 grams",
+        "Protein: 8.67 grams",
+        "Fat: 0.53 grams",
+        "Fiber: 6.4 grams",
+        "Vitamin C: 1.5 mg",
+        "Vitamin A: 2 IU",
+        "Vitamin K: 8.3 mcg",
+        "Folate: 257 mcg",
+        "Calcium: 35 mg",
+        "Iron: 2.8 mg",
+        "Potassium: 355 mg",
+      ]),
   ItemsVegetarian(
       type: 'legumes',
       name: 'Peas',
@@ -133,7 +332,22 @@ var legumes = [
       imageAsset: 'images/legumes/peas.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Peas are a delicious and nutritious legume. They are a good source of protein, fiber, and vitamins. Peas can be used in various dishes, such as stir-fries, rice dishes, and soups.'),
+          'Peas are a delicious and nutritious legume. They are a good source of protein, fiber, and vitamins. Peas can be used in various dishes, such as stir-fries, rice dishes, and soups.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 81 kcal",
+        "Carbohydrates: 14.45 grams",
+        "Protein: 5.42 grams",
+        "Fat: 0.4 grams",
+        "Fiber: 5.1 grams",
+        "Vitamin C: 13.2 mg",
+        "Vitamin A: 765 IU",
+        "Vitamin K: 24.8 mcg",
+        "Folate: 65 mcg",
+        "Calcium: 25 mg",
+        "Iron: 1.47 mg",
+        "Potassium: 244 mg",
+      ]),
   ItemsVegetarian(
       type: 'legumes',
       name: 'Soybeans',
@@ -141,5 +355,20 @@ var legumes = [
       imageAsset: 'images/legumes/soybeans.png',
       priceInMarket: 'Rp10.000',
       description:
-          'Soybeans are a complete source of protein and contain all essential amino acids. They are used to make soy products like tofu, tempeh, and soy milk, which are popular vegetarian protein sources.'),
+          'Soybeans are a complete source of protein and contain all essential amino acids. They are used to make soy products like tofu, tempeh, and soy milk, which are popular vegetarian protein sources.',
+      nutritionsTypeWeight: 'per 100 grams',
+      listNutritions: [
+        "Calories: 173 kcal",
+        "Carbohydrates: 9.93 grams",
+        "Protein: 16.64 grams",
+        "Fat: 9.57 grams",
+        "Fiber: 6 grams",
+        "Vitamin C: 6 mg",
+        "Vitamin A: 1 IU",
+        "Vitamin K: 47 mcg",
+        "Folate: 183 mcg",
+        "Calcium: 102 mg",
+        "Iron: 3.55 mg",
+        "Potassium: 515 mg",
+      ]),
 ];
