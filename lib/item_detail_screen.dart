@@ -64,7 +64,7 @@ class _ItemDetail extends State<ItemDetail> {
             Container(
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.only(
-                  top: 30, left: 20, bottom: 30, right: 20),
+                  top: 30, left: 20, bottom: 20, right: 20),
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -85,9 +85,6 @@ class _ItemDetail extends State<ItemDetail> {
                   ),
                   const SizedBox(
                     height: 10,
-                  ),
-                  Center(
-                    child: Text(widget.item.nutrition),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
@@ -118,7 +115,22 @@ class _ItemDetail extends State<ItemDetail> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text('Nutrition ${widget.item.nutritionsTypeWeight}'),
+                  Text(
+                    'Nutrition ${widget.item.nutritionsTypeWeight}:',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: colorSecondary,
+                        fontSize: 17.0),
+                  ),
+                  ListView(
+                    shrinkWrap: true,
+                    children: widget.item.listNutritions.map((nutrition) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: Text('- $nutrition'),
+                      );
+                    }).toList(),
+                  )
                 ],
               ),
             )
