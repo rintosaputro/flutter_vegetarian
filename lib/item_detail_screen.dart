@@ -35,29 +35,30 @@ class _ItemDetail extends State<ItemDetail> {
                     ))),
                 SafeArea(
                   child: Padding(
-                      padding: const EdgeInsets.only(top: 16, left: 10),
-                      child: InkWell(
-                        onTap: () => Navigator.pop(context),
-                        child: Row(
-                          children: <Widget>[
-                            const Icon(
-                              Icons.arrow_back_ios_new,
-                              size: 17,
-                              color: colorPrimary,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              widget.item.type,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 15,
-                                  color: colorPrimary),
-                            )
-                          ],
-                        ),
-                      )),
+                    padding: const EdgeInsets.only(top: 16, left: 10),
+                    child: InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: Row(
+                        children: <Widget>[
+                          const Icon(
+                            Icons.arrow_back_ios_new,
+                            size: 17,
+                            color: colorPrimary,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            widget.item.type,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                                color: colorPrimary),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -66,10 +67,12 @@ class _ItemDetail extends State<ItemDetail> {
               padding: const EdgeInsets.only(
                   top: 30, left: 20, bottom: 20, right: 20),
               decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40))),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
+              ),
               transform: Matrix4.translationValues(0.0, -27.0, 0.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,12 +127,14 @@ class _ItemDetail extends State<ItemDetail> {
                   ),
                   ListView(
                     shrinkWrap: true,
-                    children: widget.item.listNutritions.map((nutrition) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: Text('- $nutrition'),
-                      );
-                    }).toList(),
+                    children: widget.item.listNutritions.map(
+                      (nutrition) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: Text('- $nutrition'),
+                        );
+                      },
+                    ).toList(),
                   )
                 ],
               ),
